@@ -28,8 +28,8 @@ public class MainScreen
     textMode(CENTER);
     fill(0);
     textSize(40);
-    logoENG = loadImage("CircleDodgeLogo_ENG.png");
-    logoSPAN = loadImage("CircleDodgeLogo_SPAN.png");
+    logoENG = loadImage("images/CircleDodgeLogo_ENG.png");
+    logoSPAN = loadImage("images/CircleDodgeLogo_SPAN.png");
     logoENG.resize(450,450);
     logoSPAN.resize(450,450);
 
