@@ -43,7 +43,12 @@ public class Player{
       System.out.println(distance);
       System.out.println(enemyRadius);
       System.out.println(playerRadius);
-      game.setup();
+      
+      //game.setup();
+      
+      game.gameOver = true; 
+      game.start = false;  // Ensure the game stops
+
     }
   }
 }

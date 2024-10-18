@@ -1,38 +1,29 @@
-public class Language{
-  
-  public String spanish(String text){
-    if(text == "Score"){
+public class Language {
+
+  public String spanish(String text) {
+    if (text.equals("Score")) {
       return "PUNTOS";
-    }else if(text == "CIRCLE DODGE"){
+    } else if (text.equals("High Score")) {
+      return "PUNTUACIÓN MÁS ALTA";
+    } else if (text.equals("CIRCLE DODGE")) {
       return "ESQUIVA EL CIRCULO";
-    }else if(text == "START"){
+    } else if (text.equals("START")) {
       return "COMENZAR";
-    }else if(text == "SPANISH"){
+    } else if (text.equals("SPANISH")) {
       return "ENGLISH";
+    } else if (text.equals("GAME OVER")) {
+      return "FIN DEL JUEGO";
+    } else if (text.equals("Restart")) {
+      return "REINICIAR";
     }
-    return null;
+    return text; // Return original text if no translation is found
   }
-  
-  public String english(String text){
-    if(text == "Resultado / puntaje"){
-      return "Score";
-    }else if(text == "esquivar el círculo"){
-      return "CIRCLE DODGE";
-    }else if(text == "comenzar"){
-      return "START";
-    }else if(text == "ENGLISH"){
-      return "SPANISH";
+
+  public String toSpanishCheck(String input, boolean spanish) {
+    if (spanish) {
+      return spanish(input);
+    } else {
+      return input;
     }
-    return null;
   }
-  
-  // could be an override method
-  public String toSpanishCheck(String input){
-    String text = input;
-    if(spanish){
-      text = spanish(text);
-    }
-    return text;
-  }
-    
 }
